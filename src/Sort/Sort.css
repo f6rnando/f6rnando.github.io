@@ -1,0 +1,17 @@
+.array-container {
+    position: absolute;
+    left: 100px;
+    top: 20px
+}
+
+.array-bar {
+    width: 4px;
+    background-color: coral;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.sorting-buttons {
+    display: block;
+    margin: auto;
+}

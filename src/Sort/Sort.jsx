@@ -14,23 +14,29 @@ export default class Sort extends React.Component {
     reset() {
         const array = [];
 
-        for (let i = 0; i < 100; i++) {
-            array.push(randomNumbers(5, 1000));
+        for (let i = 0; i < 140; i++) {
+            array.push(randomNumbers(5, 800));
         }
         this.setState({array});
+    }
+
+    mergeSort() {
+        
     }
 
     render() {
         const {array} = this.state;
 
         return (
-            <>
+            <div className="array-container">
                 {array.map((value, index) => (
-                    <div className="array-bar" key={index}>
-                        {value}
-                    </div>
+                    <div className="array-bar" key={index} style={{height: `${value}px`}}></div>
                 ))}
-            </>
+                <div className="sorting-buttons">
+                    <button className="reset-button" onClick={() => this.reset()}>New Array</button>
+                    <button className="reset-button" onClick={() => this.mergeSort()}>Merge Sort</button>
+                </div>
+            </div>
         );
     }
 }
